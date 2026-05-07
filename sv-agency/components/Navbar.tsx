@@ -56,7 +56,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#footer"
+                href="#contact"
                 className="px-5 py-2 border border-primary text-primary text-sm relative overflow-hidden transition-all group hover:text-primary-foreground"
               >
                 <span className="relative z-10">Contact Us</span>
@@ -127,7 +127,7 @@ const Navbar = () => {
                     </a>
                   ))}
                   <a
-                    href="#footer"
+                    href="#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="mt-4 px-4 py-3 border border-primary text-primary text-center relative overflow-hidden transition-all group hover:text-primary-foreground"
                   >

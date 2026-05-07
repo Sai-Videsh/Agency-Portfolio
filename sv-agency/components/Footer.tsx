@@ -39,8 +39,13 @@ export default function Footer() {
             <h4 className="mb-4">About the Builder</h4>
             <div className="p-4 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-lg">
-                  SV
+                <div className="w-12 h-12 relative rounded overflow-hidden flex-shrink-0">
+                  <Image 
+                    src="/pic_black_bck.png" 
+                    alt="Sai Videsh" 
+                    fill 
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div>
                   <div className="">Sai Videsh</div>

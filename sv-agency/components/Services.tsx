@@ -60,7 +60,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-4">
             Complete Customer System
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -80,9 +80,9 @@ export default function Services() {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="p-6 bg-secondary/20 border border-border hover:border-primary/30 transition-all card-hover"
+              className="p-6 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 hover:border-primary/30 transition-all card-hover"
             >
-              <h4 className="text-lg font-semibold mb-2">{service.title}</h4>
+              <h4 className="text-lg mb-2">{service.title}</h4>
               <p className="text-muted-foreground text-sm">{service.description}</p>
             </motion.div>
           ))}

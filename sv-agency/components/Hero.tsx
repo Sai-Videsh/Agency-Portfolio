@@ -23,7 +23,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6"
         >
           I build your entire
           <br />
@@ -50,13 +50,13 @@ export default function Hero() {
             href="https://wa.me/917396733009?text=Hi%20Sai,%20I'm%20interested%20in%20building%20my%20customer%20system"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-white border border-black text-black font-semibold relative overflow-hidden transition-all hover:border-white hover:text-white"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-primary border border-primary text-primary-foreground relative overflow-hidden transition-all hover:text-primary"
           >
             <span className="relative z-10 flex items-center gap-3">
               <MessageCircle className="w-5 h-5" />
               Contact Now
             </span>
-            <span className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+            <span className="absolute inset-0 bg-background transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
           </a>
         </motion.div>
 
@@ -120,7 +120,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.9 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <div className="w-6 h-10 border-2 border-border flex items-start justify-center p-2">
+        <div className="w-6 h-10 border-2 border-accent/50 flex items-start justify-center p-2">
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}

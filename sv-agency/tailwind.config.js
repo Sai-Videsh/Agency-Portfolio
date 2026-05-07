@@ -8,13 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        foreground: '#ffffff',
-        primary: '#ffffff',
-        secondary: '#1a1a1a',
-        muted: '#666666',
-        accent: '#f0f0f0',
-        border: '#333333',
+        background: '#09090b',
+        foreground: '#fafafa',
+        primary: '#e4e4e7',
+        'primary-foreground': '#09090b',
+        secondary: '#18181b',
+        'secondary-foreground': '#fafafa',
+        muted: '#a1a1aa',
+        'muted-foreground': '#a1a1aa',
+        accent: '#27272a',
+        'accent-foreground': '#fafafa',
+        border: '#27272a',
       },
       fontFamily: {
         'geist': ['Geist', 'system-ui', 'sans-serif'],

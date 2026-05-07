@@ -37,7 +37,7 @@ export default function Products() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-4">
             My Past Built Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -54,10 +54,10 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 bg-secondary/20 border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col"
+              className="group p-6 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col"
             >
               {/* Title */}
-              <h3 className="text-lg font-bold mb-3">{product.title}</h3>
+              <h3 className="text-lg mb-3">{product.title}</h3>
 
               {/* Description */}
               <p className="text-muted-foreground text-sm mb-6 flex-grow">{product.description}</p>
@@ -67,7 +67,7 @@ export default function Products() {
                 href={`https://wa.me/917396733009?text=${encodeURIComponent(product.whatsappText)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-primary hover:text-muted-foreground transition-colors font-medium"
+                className="text-sm text-primary hover:text-muted-foreground transition-colors"
               >
                 Try Now
               </a>

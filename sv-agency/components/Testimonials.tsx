@@ -22,7 +22,7 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-4">
             What Clients Say
           </h2>
         </motion.div>
@@ -33,7 +33,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative p-8 bg-secondary/20 border border-border card-hover mb-8"
+          className="relative p-8 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 card-hover mb-8"
         >
           {/* Quote Icon */}
           <div className="absolute top-6 right-6">
@@ -54,11 +54,11 @@ export default function Testimonials() {
 
           {/* Author */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-lg">
               CN
             </div>
             <div>
-              <div className="font-semibold">{testimonial.author}</div>
+              <div className="">{testimonial.author}</div>
               <div className="text-sm text-muted-foreground">{testimonial.role}</div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
         >
           <button
             onClick={() => alert("Review functionality coming soon!")}
-            className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground relative overflow-hidden transition-all group hover:text-background"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-accent/50 text-foreground relative overflow-hidden transition-all group hover:text-background"
           >
             <span className="relative z-10 flex items-center gap-2">
               <MessageSquarePlus className="w-4 h-4" />

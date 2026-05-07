@@ -100,7 +100,7 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-4">
             Simple Pricing
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -120,27 +120,27 @@ export default function Pricing() {
             <motion.div
               key={plan.name}
               variants={itemVariants}
-              className={`relative p-8 bg-secondary/20 border ${
+              className={`relative p-8 bg-gradient-to-br from-secondary to-background shadow-xl border ${
                 plan.popular 
                   ? "border-primary" 
-                  : "border-border hover:border-primary/50"
+                  : "border-accent/50 hover:border-primary/50"
               } transition-all duration-300 ${
                 plan.popular ? "hover:-translate-y-1" : ""
               }`}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs">
                   Most Popular
                 </div>
               )}
 
               {/* Plan Name */}
-              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+              <h3 className="text-xl mb-2">{plan.name}</h3>
               
               {/* Price */}
               <div className="mb-4">
-                <span className="text-3xl font-bold">{plan.price}</span>
+                <span className="text-3xl">{plan.price}</span>
                 <span className="text-muted-foreground text-sm">/{plan.period}</span>
               </div>
 
@@ -164,8 +164,8 @@ export default function Pricing() {
                 rel="noopener noreferrer"
                 className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 font-medium relative overflow-hidden transition-all group ${
                   plan.popular
-                    ? "bg-primary text-primary-foreground border border-primary hover:border-background hover:text-background"
-                    : "border border-primary text-primary hover:text-primary-foreground"
+                    ? "bg-primary text-primary-foreground border border-primary hover:text-primary"
+                    : "bg-transparent border border-primary text-primary hover:text-primary-foreground"
                 }`}
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -190,13 +190,13 @@ export default function Pricing() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="p-8 bg-secondary/20 border border-border hover:border-primary/50 transition-all duration-300">
+          <div className="p-8 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 hover:border-primary/50 transition-all duration-300">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Plan Info */}
               <div>
-                <h3 className="text-2xl font-bold mb-2">{maintenance.name}</h3>
+                <h3 className="text-2xl mb-2">{maintenance.name}</h3>
                 <div className="mb-4">
-                  <span className="text-3xl font-bold">{maintenance.price}</span>
+                  <span className="text-3xl">{maintenance.price}</span>
                   <span className="text-muted-foreground text-sm">/{maintenance.period}</span>
                 </div>
                 <p className="text-muted-foreground text-sm mb-6">{maintenance.description}</p>

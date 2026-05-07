@@ -49,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-geist antialiased">
+      <body className="antialiased">
         {children}
       </body>
     </html>

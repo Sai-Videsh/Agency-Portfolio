@@ -21,7 +21,7 @@ export default function WorkShowcase() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-4">
             Past Work
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ export default function WorkShowcase() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="group relative overflow-hidden bg-secondary/20 border border-border hover:border-primary/30 transition-all">
+          <div className="group relative overflow-hidden bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 hover:border-primary/30 transition-all">
             {/* Video Demo Placeholder */}
             <div className="relative aspect-video bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px]" />
@@ -60,7 +60,7 @@ export default function WorkShowcase() {
                   </span>
                 ))}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+              <h3 className="text-2xl mb-3">{project.title}</h3>
               <p className="text-muted-foreground max-w-xl mx-auto">{project.description}</p>
             </div>
           </div>

@@ -60,7 +60,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Your page, your bot, your Google presence. So customers find you, get answered instantly, and keep coming back, without you doing anything manually.
+          We help restaurants, salons, and retail shops in Bengaluru get more repeat customers using AI voice agents, automated review follow-ups, and loyalty programs. Set up in under a week, no tech knowledge needed.
         </motion.p>
 
         {/* CTA Button - WhatsApp */}

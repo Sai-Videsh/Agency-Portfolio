@@ -18,11 +18,34 @@ export default function Hero() {
       <FloatingParticles />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        {/* Caption */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-6 flex justify-center"
+        >
+          <motion.p
+            animate={{ 
+              opacity: [0.7, 1, 0.7],
+              filter: [
+                "drop-shadow(0 0 2px rgba(255,255,255,0.1))", 
+                "drop-shadow(0 0 12px rgba(255,255,255,0.6))", 
+                "drop-shadow(0 0 2px rgba(255,255,255,0.1))"
+              ]
+            }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="text-primary font-serif italic text-lg sm:text-xl"
+          >
+            "Your business never sleeps online."
+          </motion.p>
+        </motion.div>
+
         {/* Main USP Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6"
         >
           I build your entire

@@ -15,9 +15,14 @@ export default function Footer() {
               <Image src="/logo.jpeg" alt="SV Agency" width={48} height={48} className="rounded object-contain" />
               <span className="text-2xl tracking-wide font-serif">Agency</span>
             </div>
-            <p className="text-muted-foreground text-sm mb-6">
-              Building complete AI customer systems for modern businesses. Your customers find you, get answered instantly, and keep coming back.
-            </p>
+            <div className="mb-6">
+              <p className="text-lg font-serif italic text-foreground mb-2">
+                "Your business never sleeps online."
+              </p>
+              <p className="text-muted-foreground text-sm">
+                Building complete AI customer systems for modern businesses. Your customers find you, get answered instantly, and keep coming back.
+              </p>
+            </div>
             <div className="flex flex-col gap-3">
               <a href="mailto:saividesh29@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />

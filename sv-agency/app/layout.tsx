@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SV Agency - Complete AI Customer Systems",
+  title: "SV Agency",
   description: "Building complete AI customer systems for modern businesses. Landing pages, WhatsApp chatbots, Google Business setup, and automation that works while you sleep.",
   keywords: ["AI automation", "landing pages", "WhatsApp chatbot", "Google Business", "customer systems"],
   authors: [{ name: "Sai Videsh" }],
   creator: "Sai Videsh",
-  publisher: "SV Agency",
+  publisher: "Agency",
   metadataBase: new URL("https://sv-agency.vercel.app"),
+  icons: {
+    icon: '/logo.jpeg',
+  },
   openGraph: {
-    title: "SV Agency - Complete AI Customer Systems",
+    title: "Agency",
     description: "Building complete AI customer systems for modern businesses. Landing pages, WhatsApp chatbots, Google Business setup, and automation that works while you sleep.",
     url: "https://sv-agency.vercel.app",
     siteName: "SV Agency",
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SV Agency - Complete AI Customer Systems",
+    title: "Agency",
     description: "Building complete AI customer systems for modern businesses. Landing pages, WhatsApp chatbots, Google Business setup, and automation that works while you sleep.",
     images: ["/og-image.png"],
   },

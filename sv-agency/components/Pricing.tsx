@@ -231,6 +231,9 @@ export default function Pricing() {
           <p className="text-sm text-muted-foreground">
             No hidden fees · One-time payment · Lifetime support available
           </p>
+          <p className="text-sm font-medium text-foreground mt-2">
+            Prices are negotiable. <a href="https://wa.me/917396733009" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Contact me.</a>
+          </p>
         </motion.div>
       </div>
     </section>

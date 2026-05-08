@@ -4,24 +4,19 @@ import { motion } from "framer-motion";
 
 const products = [
   {
-    title: "WhatsApp Bot Builder",
-    description: "A no-code tool to create custom WhatsApp chatbots with AI responses, automated replies, and business integrations.",
-    whatsappText: "Hi Sai, I came across your WhatsApp Bot Builder and would like to try it out. Can you share access or demo details?",
+    title: "DropiQ",
+    description: "A platform where you can browse the products you need across multiple online and offline (local) stores according to your location. It includes a recommendation engine with very specific filters. Initially confined to audio products.",
+    whatsappText: "Hi Sai, I came across DropiQ and would like to try it out. Can you share access or demo details?",
   },
   {
-    title: "Landing Page Generator",
-    description: "AI-powered landing page creator that generates high-converting pages with copy, images, and CTAs in minutes.",
-    whatsappText: "Hi Sai, your Landing Page Generator looks interesting. I'd like to try it and see how it can help my business.",
+    title: "Security Engine",
+    description: "A Chrome extension that gives you the risk score of any link you hover over, and provides loopback ways to enter the link safely.",
+    whatsappText: "Hi Sai, your Security Engine extension looks interesting. I'd like to try it and see how it works.",
   },
   {
-    title: "Review Automation System",
-    description: "Automated review collection and management system that follows up with customers and boosts ratings organically.",
-    whatsappText: "Hi Sai, I'm interested in your Review Automation System. Would love to try it out and see how it can help get more reviews.",
-  },
-  {
-    title: "Voice Agent Platform",
-    description: "AI voice assistant platform for handling calls, bookings, and customer support with natural conversation flow.",
-    whatsappText: "Hi Sai, your Voice Agent Platform caught my attention. I'd like to try it out and understand how it can handle my business calls.",
+    title: "Contract Bot",
+    description: "Generates legal contracts (like rental agreements, freelance NDAs, etc.) from a single prompt using fixed templates. You can customize the templates while keeping your private information completely confidential with zero hallucinations.",
+    whatsappText: "Hi Sai, I'm interested in the Contract Bot. Would love to try it out and see how it generates legal documents.",
   },
 ];
 
@@ -38,7 +33,7 @@ export default function Products() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl mb-4">
-            My Past Built Projects
+            Products
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Tools and platforms I've built. Try them out by requesting access.
@@ -46,7 +41,7 @@ export default function Products() {
         </motion.div>
 
         {/* Product Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <motion.div
               key={product.title}

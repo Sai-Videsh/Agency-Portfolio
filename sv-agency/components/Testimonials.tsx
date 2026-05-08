@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Quote, Star, MessageSquarePlus, X, Send, Loader2 } from "lucide-react";
 
 const testimonial = {
-  quote: "Working with SV Agency completely transformed our online presence. Professional, fast, and delivered exactly what we needed. Highly recommended.",
+  quote: "His dedication towards work is what inspires me, like the order was given and within 2 days, he delivered a cleanly designed Customer page for my cafe, and also gave constant support for update cycles and bugs that users encountered. He was also ready to add AI automation of booking system with a whatsapp chat bot integration to the system.",
   author: "S Ramesh",
   role: "Cafe Owner",
-  rating: 5,
+  rating: 4.5,
 };
 
 export default function Testimonials() {
@@ -102,9 +102,23 @@ export default function Testimonials() {
 
           {/* Rating */}
           <div className="flex gap-1 mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-            ))}
+            {Array.from({ length: 5 }).map((_, i) => {
+              const isFull = i < Math.floor(testimonial.rating);
+              const isHalf = i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0;
+              return (
+                <div key={i} className="relative">
+                  <Star className="w-5 h-5 text-muted-foreground/30" />
+                  {(isFull || isHalf) && (
+                    <div
+                      className="absolute inset-0 overflow-hidden"
+                      style={{ width: isHalf ? '50%' : '100%' }}
+                    >
+                      <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Quote Text */}

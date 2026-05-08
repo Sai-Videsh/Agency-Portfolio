@@ -38,7 +38,7 @@ const plans = [
     whatsappMessage: "Hi Sai, I want these services that are in Growth plan: Everything in Starter plus lead capture form, automated WhatsApp follow-up, loyalty messaging, Instagram link and SEO setup. Let's discuss this."
   },
   {
-    name: "Pro",
+    name: "Enterprise",
     price: "Custom",
     period: "pricing",
     description: "Everything in Growth plus advanced AI and analytics features.",

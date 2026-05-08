@@ -9,6 +9,16 @@ const project = {
   tags: ["Landing Page", "UX Design", "Cafe"],
 };
 
+import Image from "next/image";
+
+const screenshots = [
+  "/projects/tabun-chai/Screenshot_20260508_113619.jpg",
+  "/projects/tabun-chai/Screenshot_20260508_113637.jpg",
+  "/projects/tabun-chai/Screenshot_20260508_113644.jpg",
+  "/projects/tabun-chai/Screenshot_20260508_113715.jpg",
+  "/projects/tabun-chai/Screenshot_20260508_113720.jpg",
+];
+
 export default function WorkShowcase() {
   return (
     <section id="work" className="py-24 relative">
@@ -38,13 +48,35 @@ export default function WorkShowcase() {
           className="max-w-4xl mx-auto"
         >
           <div className="group relative overflow-hidden bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 hover:border-primary/30 transition-all">
-            {/* Video Demo Placeholder */}
-            <div className="relative aspect-video bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px]" />
-              
-              <div className="relative z-10 flex flex-col items-center gap-4">
-                <Play className="w-12 h-12 text-primary cursor-pointer" />
-                <span className="text-sm text-muted-foreground">Watch Demo Video</span>
+            {/* Screenshots Showcase */}
+            <div className="relative w-full overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 py-16 group/marquee">
+              {/* Fade masks for smooth entry/exit */}
+              <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+
+              <div className="flex gap-6 w-max animate-marquee group-hover/marquee:[animation-play-state:paused] px-3">
+                {[...screenshots, ...screenshots].map((src, idx) => (
+                  <motion.div 
+                    key={idx} 
+                    className="relative flex-none w-32 sm:w-40 md:w-48 aspect-[9/16] rounded-xl overflow-hidden border border-accent/30 shadow-lg bg-background/50 cursor-pointer origin-center"
+                    whileHover={{ 
+                      scale: 1.15,
+                      zIndex: 50,
+                      boxShadow: "0 20px 25px -5px rgba(0,0,0,0.3)"
+                    }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  >
+                    {/* Shift the image up by 12% to hide the mobile browser address bar */}
+                    <div className="absolute w-full h-[112%] -top-[12%] left-0 pointer-events-none">
+                      <Image
+                        src={src}
+                        alt={`Project screenshot ${idx + 1}`}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
 
@@ -61,7 +93,17 @@ export default function WorkShowcase() {
                 ))}
               </div>
               <h3 className="text-2xl mb-3">{project.title}</h3>
-              <p className="text-muted-foreground max-w-xl mx-auto">{project.description}</p>
+              <p className="text-muted-foreground max-w-xl mx-auto mb-6">{project.description}</p>
+              
+              <a 
+                href="https://tabun-chai.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-foreground transition-colors group/link font-mono text-sm"
+              >
+                Check out the project at tabun-chai.vercel.app
+                <ExternalLink className="w-4 h-4 transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+              </a>
             </div>
           </div>
         </motion.div>

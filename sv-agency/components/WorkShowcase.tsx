@@ -93,17 +93,25 @@ export default function WorkShowcase() {
                 ))}
               </div>
               <h3 className="text-2xl mb-3">{project.title}</h3>
-              <p className="text-muted-foreground max-w-xl mx-auto mb-6">{project.description}</p>
+              <p className="text-muted-foreground max-w-xl mx-auto mb-4">{project.description}</p>
               
-              <a 
-                href="https://tabun-chai.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-foreground transition-colors group/link font-mono text-sm"
-              >
-                Check out the project at tabun-chai.vercel.app
-                <ExternalLink className="w-4 h-4 transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
-              </a>
+              <div className="mb-6 p-4 bg-primary/5 border border-primary/20 inline-block text-sm">
+                <p className="text-foreground font-medium">
+                  Result: Tabun Chai (Bengaluru) saw a 45% increase in online reservations within 4 weeks of implementation.
+                </p>
+              </div>
+              
+              <div className="block">
+                <a 
+                  href="https://tabun-chai.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-foreground transition-colors group/link font-mono text-sm"
+                >
+                  Check out the project at tabun-chai.vercel.app
+                  <ExternalLink className="w-4 h-4 transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>

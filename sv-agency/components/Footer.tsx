@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="py-16 border-t border-accent/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-1.5 mb-4">
@@ -20,7 +20,7 @@ export default function Footer() {
                 "Your business never sleeps online."
               </p>
               <p className="text-muted-foreground text-sm">
-                Building complete AI customer systems for modern businesses. Your customers find you, get answered instantly, and keep coming back.
+                Building complete AI customer systems for modern businesses.
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -39,10 +39,20 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* About the Agency - Trust Anchor */}
+          <div>
+            <h4 className="mb-4 font-serif italic">About the Agency</h4>
+            <div className="p-5 bg-primary/5 border border-primary/10 rounded-2xl">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                SV Agency is a <span className="text-foreground">Bengaluru-based</span> AI consulting firm specializing in AI voice agents, WhatsApp automation, and loyalty systems for local businesses. Founded in 2026, we have helped a couple of local clients and built many individual products around these core services to scale business operations.
+              </p>
+            </div>
+          </div>
+
           {/* Owner Info */}
           <div>
             <h4 className="mb-4">About the Builder</h4>
-            <div className="p-4 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50">
+            <div className="p-4 bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 rounded-2xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 relative rounded overflow-hidden flex-shrink-0">
                   <Image 
@@ -53,12 +63,12 @@ export default function Footer() {
                   />
                 </div>
                 <div>
-                  <div className="">Sai Videsh</div>
+                  <div className="font-medium">Sai Videsh</div>
                   <div className="text-xs text-muted-foreground">Founder & Developer</div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                IIIT student, content creator, and developer passionate about building AI solutions that help businesses grow. I create tools that work while you sleep.
+                AI automation consultant with 2 years of experience building systems for Bengaluru F&B and retail businesses.
               </p>
             </div>
           </div>

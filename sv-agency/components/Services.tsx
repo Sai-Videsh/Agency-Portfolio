@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Landing Page",
+    title: "How does a professional landing page grow my local business?",
+    target: "Best for restaurants, salons, and retail shops with 10–200 customers per day who want to build a high-end online presence and capture leads without hiring a tech team.",
     description: "A professional landing page captures customer details online and drives local traffic to your business with clear calls to action and mobile optimization.",
     steps: [
       { title: "Ask Domain Questions", desc: "We ask targeted questions to align the design with your specific business goals." },
@@ -14,7 +15,8 @@ const services = [
     ]
   },
   {
-    title: "WhatsApp Chatbot",
+    title: "Can a WhatsApp chatbot handle my customer orders automatically?",
+    target: "Ideal for cafes, bakeries, and retail stores that receive many routine questions and orders over WhatsApp and want to automate them 24/7.",
     description: "An AI WhatsApp chatbot instantly answers customer questions, takes orders, and sends automated follow-ups 24/7 without requiring your staff's manual intervention.",
     steps: [
       { title: "Map Customer Chats", desc: "We analyze your common queries to identify exactly what the bot must handle." },
@@ -25,7 +27,8 @@ const services = [
     ]
   },
   {
-    title: "Google Business Setup",
+    title: "How do I get my business to show up on top of Google Maps?",
+    target: "Perfect for local service businesses like gyms, clinics, and salons that want to appear first when customers search for services 'near me'.",
     description: "We optimize your Google Business Profile to ensure your business appears at the top of local search results when nearby customers are looking for your services.",
     steps: [
       { title: "Audit Your Profile", desc: "We identify missing details on your profile that are blocking local search traffic." },
@@ -34,7 +37,8 @@ const services = [
     ]
   },
   {
-    title: "AI Voice Agent",
+    title: "Will an AI voice agent really answer my business calls 24/7?",
+    target: "Best for busy restaurants and dental/medical clinics that miss calls during peak hours or after-hours and want to book appointments automatically.",
     description: "An AI voice agent answers your customer calls 24/7, books appointments, handles FAQs, and follows up with missed callers so your staff focuses on in-person service instead of phones.",
     steps: [
       { title: "Analyze Call Volume", desc: "We review your call logs to determine which routine questions the AI should intercept." },
@@ -45,7 +49,8 @@ const services = [
     ]
   },
   {
-    title: "Automated Review Follow-ups",
+    title: "How do I get 3x more Google reviews from my current customers?",
+    target: "Great for any retail or service business that provides a high-quality experience but struggles to get customers to actually leave a review.",
     description: "We set up automated WhatsApp and SMS follow-ups that ask happy customers to leave a Google review within 2 hours of their visit. Most clients see a 3x review increase in the first month.",
     steps: [
       { title: "Find the Happy Moment", desc: "We pinpoint the exact moment your customer is happiest to ask for a review." },
@@ -55,7 +60,8 @@ const services = [
     ]
   },
   {
-    title: "Loyalty Messaging",
+    title: "How can automated loyalty messages bring customers back to my store?",
+    target: "Ideal for retail shops and salons with a database of past customers who haven't visited in 30-60 days and need a reason to return.",
     description: "Automated personalized retention campaigns send targeted offers and updates to your existing customers to keep them engaged and coming back to your store.",
     steps: [
       { title: "Group Your Customers", desc: "We categorize your sales data to identify who is ready to buy again." },
@@ -98,24 +104,37 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="sticky top-24 md:top-[50dvh] md:-translate-y-1/2 w-full p-6 md:p-10 bg-background border border-accent/50 shadow-2xl rounded-3xl"
+                className="sticky top-32 md:top-[52dvh] md:-translate-y-1/2 w-full p-5 md:p-8 bg-background border border-accent/50 shadow-2xl rounded-3xl"
                 style={{ zIndex: index + 10 }}
               >
                 {/* Top Section: Title & Description */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-lg">
+                <div className="mb-4">
+                  <div className="flex items-center gap-4 mb-8">
+                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-base">
                       {index + 1}
                     </span>
-                    <h3 className="text-3xl sm:text-4xl">{service.title}</h3>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl max-w-4xl leading-tight font-medium">
+                      {service.title}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
-                    {service.description}
-                  </p>
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 mb-4">
+                    <div>
+                      <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-3">
+                        {service.description}
+                      </p>
+                      <div className="p-4 bg-secondary/30 rounded-2xl border border-accent/20">
+                        <h4 className="text-xs font-semibold uppercase tracking-widest text-primary mb-1.5">Who is this for?</h4>
+                        <p className="text-sm sm:text-base text-foreground leading-relaxed italic">
+                          {service.target}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Bottom Section: Horizontal Roadmap */}
-                <div className="border-t border-accent/30 pt-6 mt-6">
+                <div className="border-t border-accent/30 pt-4 mt-4">
                   <h4 className="text-lg font-medium mb-4 flex items-center gap-2">
                     How it works
                   </h4>

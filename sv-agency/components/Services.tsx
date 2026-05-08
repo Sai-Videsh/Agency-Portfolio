@@ -116,29 +116,29 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="sticky top-20 md:top-[52dvh] md:-translate-y-1/2 w-full p-6 md:p-8 bg-background border border-accent/50 shadow-2xl rounded-3xl"
+                className="sticky top-20 md:top-[52dvh] md:-translate-y-1/2 w-full p-5 md:p-8 bg-background border border-accent/50 shadow-2xl rounded-3xl"
                 style={{ zIndex: index + 10 }}
               >
                 {/* Top Section: Title & Description */}
-                <div className="mb-4">
-                  <div className="flex items-center gap-4 mb-5">
-                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                <div className="mb-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary font-bold text-sm">
                       {index + 1}
                     </span>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl max-w-4xl leading-tight font-medium">
+                    <h3 className="text-lg sm:text-2xl lg:text-3xl max-w-4xl leading-tight font-medium">
                       {service.title}
                     </h3>
                   </div>
                   
-                  <div className="grid grid-cols-1 gap-4 mb-4">
+                  <div className="grid grid-cols-1 gap-2 mb-3">
                     <div>
-                      <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-3">
+                      <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed mb-2">
                         <span className="md:hidden">{service.mobileDescription}</span>
                         <span className="hidden md:inline">{service.description}</span>
                       </p>
-                      <div className="p-4 bg-secondary/30 rounded-2xl border border-accent/20">
-                        <h4 className="text-[11px] font-semibold uppercase tracking-widest text-primary mb-1.5">Who is this for?</h4>
-                        <p className="text-sm sm:text-base text-foreground leading-relaxed italic">
+                      <div className="p-3 bg-secondary/30 rounded-xl border border-accent/20">
+                        <h4 className="text-[10px] font-semibold uppercase tracking-widest text-primary mb-1">Who is this for?</h4>
+                        <p className="text-xs sm:text-base text-foreground leading-relaxed italic">
                           <span className="md:hidden">{service.mobileTarget}</span>
                           <span className="hidden md:inline">{service.target}</span>
                         </p>
@@ -148,23 +148,23 @@ export default function Services() {
                 </div>
 
                 {/* Bottom Section: Grid Roadmap */}
-                <div className="border-t border-accent/30 pt-4 mt-4">
-                  <h4 className="text-base font-medium mb-4 flex items-center gap-2">
+                <div className="border-t border-accent/30 pt-3 mt-2">
+                  <h4 className="text-sm font-medium mb-2 flex items-center gap-2">
                     How it works
                   </h4>
-                  <div className="grid grid-cols-2 md:flex md:flex-row gap-3">
+                  <div className={`grid ${service.steps.length > 4 ? 'grid-cols-3' : 'grid-cols-2'} md:flex md:flex-row gap-2`}>
                     {service.steps.map((step, stepIndex) => (
                       <div 
                         key={step.title}
-                        className="relative bg-secondary/20 p-3 rounded-xl border border-accent/20 flex flex-col md:flex-1"
+                        className="relative bg-secondary/20 p-2 rounded-xl border border-accent/20 flex flex-col md:flex-1"
                       >
                         {/* Roadmap Node */}
-                        <div className="relative z-10 w-6 h-6 rounded-full bg-background border border-primary/40 text-primary flex items-center justify-center text-[11px] font-bold mb-2">
+                        <div className="relative z-10 w-5 h-5 rounded-full bg-background border border-primary/40 text-primary flex items-center justify-center text-[10px] font-bold mb-1.5">
                           {stepIndex + 1}
                         </div>
                         
-                        <h5 className="text-xs font-medium mb-1 leading-tight">{step.title}</h5>
-                        <p className="text-[10px] text-muted-foreground leading-snug line-clamp-2 md:line-clamp-none">
+                        <h5 className="text-[10px] font-medium mb-0.5 leading-tight">{step.title}</h5>
+                        <p className="text-[9px] text-muted-foreground leading-tight line-clamp-2 md:line-clamp-none">
                           {step.desc}
                         </p>
                       </div>

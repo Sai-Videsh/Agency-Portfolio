@@ -42,7 +42,7 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <h3 className="text-lg md:text-xl font-medium pr-8 group-hover:text-primary transition-colors">
+        <h3 className="text-base md:text-xl font-medium pr-8 group-hover:text-primary transition-colors">
           {question}
         </h3>
         <div className="flex-shrink-0 w-8 h-8 rounded-full border border-accent/50 flex items-center justify-center group-hover:border-primary transition-colors">
@@ -56,7 +56,7 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="text-muted-foreground text-lg pb-6 leading-relaxed max-w-4xl">
+        <p className="text-muted-foreground text-base pb-6 leading-relaxed max-w-4xl">
           {answer}
         </p>
       </motion.div>
@@ -67,10 +67,10 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
 export default function FAQ() {
   return (
     <section id="faq" className="py-24 bg-secondary/10">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl mb-4 font-serif italic">Common Questions</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-2xl sm:text-4xl mb-4 font-serif italic">Common Questions</h2>
+          <p className="text-muted-foreground text-base sm:text-lg">
             Everything you need to know about our AI systems and how they help your business.
           </p>
         </div>

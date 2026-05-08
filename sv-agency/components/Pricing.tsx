@@ -91,7 +91,7 @@ const itemVariants = {
 export default function Pricing() {
   return (
     <section id="pricing" className="py-24 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,10 +100,10 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl mb-4">
+          <h2 className="text-2xl sm:text-4xl mb-4">
             Simple Pricing
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Choose the perfect plan for your business. One-time payment, lifetime value.
           </p>
         </motion.div>

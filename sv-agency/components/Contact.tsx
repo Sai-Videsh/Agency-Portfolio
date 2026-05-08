@@ -46,7 +46,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 relative border-t border-accent/50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,10 +55,10 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl mb-4 font-serif font-light tracking-wide">
+          <h2 className="text-2xl sm:text-4xl mb-4 font-serif font-light tracking-wide">
             Get In Touch
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Ready to build your AI customer system? Send me a message and I'll get back to you immediately.
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 p-8"
+          className="bg-gradient-to-br from-secondary to-background shadow-xl border border-accent/50 p-6 md:p-8"
         >
           {submitStatus === "success" ? (
             <div className="text-center py-12">

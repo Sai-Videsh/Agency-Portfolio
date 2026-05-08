@@ -6,7 +6,7 @@ import FloatingParticles from "./FloatingParticles";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 w-full max-w-[100vw]">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-hero-glow" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
@@ -16,14 +16,14 @@ export default function Hero() {
       
       {/* Floating Particles */}
       <FloatingParticles />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+ 
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
         {/* Caption */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="mb-6 flex justify-center"
+          className="mb-6 w-full"
         >
           <motion.p
             animate={{ 
@@ -35,30 +35,30 @@ export default function Hero() {
               ]
             }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="text-primary font-serif italic text-lg sm:text-xl"
+            className="text-primary font-serif italic text-base sm:text-xl w-full"
           >
             "Your business never sleeps online."
           </motion.p>
         </motion.div>
-
+ 
         {/* Main USP Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6"
+          className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 break-words w-full px-2"
         >
           I build your entire
           <br />
           <span className="text-white">online customer system</span>
         </motion.h1>
-
+ 
         {/* Explanation Text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed px-2 break-words w-full"
         >
           We help restaurants, salons, and retail shops in Bengaluru get more repeat customers using AI voice agents, automated review follow-ups, and loyalty programs. Set up in under a week, no tech knowledge needed.
         </motion.p>

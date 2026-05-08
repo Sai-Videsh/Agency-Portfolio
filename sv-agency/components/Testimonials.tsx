@@ -73,7 +73,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-24 relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl mb-4 font-serif font-light tracking-wide">
+          <h2 className="text-2xl sm:text-4xl mb-4 font-serif font-light tracking-wide">
             What Clients Say
           </h2>
         </motion.div>

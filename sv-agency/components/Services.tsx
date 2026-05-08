@@ -6,9 +6,9 @@ const services = [
   {
     title: "How does a professional landing page grow my local business?",
     target: "Best for restaurants, salons, and retail shops with 10–200 customers per day who want to build a high-end online presence and capture leads without hiring a tech team.",
-    mobileTarget: "Local shops needing a professional online presence and leads.",
+    mobileTarget: "Best for shops wanting high-end online presence and leads without tech teams.",
     description: "A professional landing page captures customer details online and drives local traffic to your business with clear calls to action and mobile optimization.",
-    mobileDescription: "Fast, mobile-ready pages to capture leads and drive local traffic.",
+    mobileDescription: "Fast, lead-capturing pages optimized to drive local traffic and customers.",
     steps: [
       { title: "Ask Domain Questions", desc: "We ask targeted questions to align the design with your specific business goals." },
       { title: "Curate Online Ideas", desc: "We gather high-performing references to build instant trust with your audience." },
@@ -19,9 +19,9 @@ const services = [
   {
     title: "Can a WhatsApp chatbot handle my customer orders automatically?",
     target: "Ideal for cafes, bakeries, and retail stores that receive many routine questions and orders over WhatsApp and want to automate them 24/7.",
-    mobileTarget: "Cafes and retail stores with high routine customer queries.",
+    mobileTarget: "Ideal for cafes and retail stores with high routine customer queries.",
     description: "An AI WhatsApp chatbot instantly answers customer questions, takes orders, and sends automated follow-ups 24/7 without requiring your staff's manual intervention.",
-    mobileDescription: "Automated AI chats to handle orders and FAQs 24/7 on WhatsApp.",
+    mobileDescription: "AI chatbot to automate orders, FAQs, and follow-ups 24/7 on WhatsApp.",
     steps: [
       { title: "Map Customer Chats", desc: "We analyze your common queries to identify exactly what the bot must handle." },
       { title: "Design the Chat Flow", desc: "We script natural conversation paths so the bot sounds helpful and human." },
@@ -33,9 +33,9 @@ const services = [
   {
     title: "How do I get my business to show up on top of Google Maps?",
     target: "Perfect for local service businesses like gyms, clinics, and salons that want to appear first when customers search for services 'near me'.",
-    mobileTarget: "Local service businesses wanting to show up 'near me'.",
+    mobileTarget: "Perfect for local businesses wanting to rank #1 on Google Maps.",
     description: "We optimize your Google Business Profile to ensure your business appears at the top of local search results when nearby customers are looking for your services.",
-    mobileDescription: "Rank higher on Google Maps to attract nearby customers.",
+    mobileDescription: "Optimize your Google Profile to rank #1 and attract local searches.",
     steps: [
       { title: "Audit Your Profile", desc: "We identify missing details on your profile that are blocking local search traffic." },
       { title: "Curate Keywords", desc: "We research what local customers are typing to find services just like yours." },
@@ -45,9 +45,9 @@ const services = [
   {
     title: "Will an AI voice agent really answer my business calls 24/7?",
     target: "Best for busy restaurants and dental/medical clinics that miss calls during peak hours or after-hours and want to book appointments automatically.",
-    mobileTarget: "Busy restaurants and clinics missing peak-hour calls.",
+    mobileTarget: "Best for busy clinics and restaurants missing peak-hour calls.",
     description: "An AI voice agent answers your customer calls 24/7, books appointments, handles FAQs, and follows up with missed callers so your staff focuses on in-person service instead of phones.",
-    mobileDescription: "AI answers calls, books appointments, and handles FAQs 24/7.",
+    mobileDescription: "AI answers calls, books appointments, and handles FAQs 24/7 so you never miss a lead.",
     steps: [
       { title: "Analyze Call Volume", desc: "We review your call logs to determine which routine questions the AI should intercept." },
       { title: "Curate the Voice", desc: "We select a voice and write scripts that perfectly match your brand's tone." },
@@ -59,9 +59,9 @@ const services = [
   {
     title: "How do I get 3x more Google reviews from my current customers?",
     target: "Great for any retail or service business that provides a high-quality experience but struggles to get customers to actually leave a review.",
-    mobileTarget: "Retailers looking to build instant trust with 5-star ratings.",
+    mobileTarget: "Great for retailers looking to build trust with 5-star Google ratings.",
     description: "We set up automated WhatsApp and SMS follow-ups that ask happy customers to leave a Google review within 2 hours of their visit. Most clients see a 3x review increase in the first month.",
-    mobileDescription: "Automated follow-ups that triple your Google reviews fast.",
+    mobileDescription: "Automated follow-ups to triple your Google reviews and build local trust.",
     steps: [
       { title: "Find the Happy Moment", desc: "We pinpoint the exact moment your customer is happiest to ask for a review." },
       { title: "Curate Message Templates", desc: "We write simple SMS messages that encourage 5-star Google ratings." },
@@ -72,9 +72,9 @@ const services = [
   {
     title: "How can automated loyalty messages bring customers back to my store?",
     target: "Ideal for retail shops and salons with a database of past customers who haven't visited in 30-60 days and need a reason to return.",
-    mobileTarget: "Shops wanting to re-engage customers who haven't visited.",
+    mobileTarget: "Ideal for shops wanting to re-engage past customers with offers.",
     description: "Automated personalized retention campaigns send targeted offers and updates to your existing customers to keep them engaged and coming back to your store.",
-    mobileDescription: "Personalized offers to bring past customers back to your store.",
+    mobileDescription: "Personalized AI campaigns and offers to bring past customers back to your store.",
     steps: [
       { title: "Group Your Customers", desc: "We categorize your sales data to identify who is ready to buy again." },
       { title: "Curate Custom Offers", desc: "We design specific discount codes that give past customers a reason to return." },
@@ -132,16 +132,16 @@ export default function Services() {
                   
                   <div className="grid grid-cols-1 gap-2 mb-3">
                     <div>
-                      <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed mb-2">
-                        <span className="md:hidden">{service.mobileDescription}</span>
-                        <span className="hidden md:inline">{service.description}</span>
-                      </p>
+                      <div className="text-muted-foreground text-sm sm:text-lg leading-relaxed mb-2">
+                        <p className="md:hidden">{service.mobileDescription}</p>
+                        <p className="hidden md:block">{service.description}</p>
+                      </div>
                       <div className="p-3 bg-secondary/30 rounded-xl border border-accent/20">
                         <h4 className="text-[10px] font-semibold uppercase tracking-widest text-primary mb-1">Who is this for?</h4>
-                        <p className="text-xs sm:text-base text-foreground leading-relaxed italic">
-                          <span className="md:hidden">{service.mobileTarget}</span>
-                          <span className="hidden md:inline">{service.target}</span>
-                        </p>
+                        <div className="text-xs sm:text-base text-foreground leading-relaxed italic">
+                          <p className="md:hidden">{service.mobileTarget}</p>
+                          <p className="hidden md:block">{service.target}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ export default function Services() {
                         </div>
                         
                         <h5 className="text-[10px] font-medium mb-0.5 leading-tight">{step.title}</h5>
-                        <p className="text-[9px] text-muted-foreground leading-tight line-clamp-2 md:line-clamp-none">
+                        <p className="text-[9px] text-muted-foreground leading-tight md:line-clamp-none">
                           {step.desc}
                         </p>
                       </div>
